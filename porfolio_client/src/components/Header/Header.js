@@ -21,15 +21,15 @@ export default function Header() {
                         <Nav.Link style={{
                             marginRight: '15px',
                             marginLeft: '15px'
-                        }} href='/projects' >Projects</Nav.Link>
+                        }} href='https://julio-leon-porfolio.netlify.app/projects' >Projects</Nav.Link>
                         <Nav.Link style={{
                             marginRight: '25px',
                             marginLeft: '25px'
-                        }} href='/skills' >Skills</Nav.Link>
+                        }} href='https://julio-leon-porfolio.netlify.app/skills' >Skills</Nav.Link>
                         <Nav.Link style={{
                             marginRight: '25px',
                             marginLeft: '25px'
-                        }} href='/contact' >Contact</Nav.Link>
+                        }} href='https://julio-leon-porfolio.netlify.app/contact' >Contact</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>

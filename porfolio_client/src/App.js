@@ -18,7 +18,7 @@ function App() {
 
   useEffect(() => {
     if (history.location.pathname === '/') {
-      history.push('/about')
+      history.push('/projects')
     }
   }, [history])
 
