@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Container, Navbar, Nav} from "react-bootstrap"
 
 export default function Header() {
@@ -18,18 +19,39 @@ export default function Header() {
                             marginRight: '15px',
                             marginLeft: '15px'
                         }} href='/about' >About</Nav.Link> */}
-                        <Nav.Link style={{
+                        <Nav.Item style={{
                             marginRight: '15px',
                             marginLeft: '15px'
-                        }} href='https://julio-leon-porfolio.netlify.app/projects' >Projects</Nav.Link>
-                        <Nav.Link style={{
+                        }}>
+                            <Link style={{
+                                textDecoration: 'none',
+                                color: 'white'
+                            }} to='/projects'>
+                                Projects
+                            </Link>
+                        </Nav.Item>
+                        <Nav.Item style={{
                             marginRight: '25px',
                             marginLeft: '25px'
-                        }} href='https://julio-leon-porfolio.netlify.app/skills' >Skills</Nav.Link>
-                        <Nav.Link style={{
+                        }}>
+                            <Link style={{
+                                textDecoration: 'none',
+                                color: 'white'
+                            }} to='/skills'>
+                                Skills
+                            </Link>
+                        </Nav.Item>
+                        <Nav.Item style={{
                             marginRight: '25px',
                             marginLeft: '25px'
-                        }} href='https://julio-leon-porfolio.netlify.app/contact' >Contact</Nav.Link>
+                        }}>
+                            <Link style={{
+                                textDecoration: 'none',
+                                color: 'white'
+                            }} to='/contact'>
+                                Contact
+                            </Link>
+                        </Nav.Item>
                     </Nav>
                 </Container>
             </Navbar>
