@@ -1,25 +1,19 @@
-/* * {
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Spectral+SC:ital,wght@1,300&display=swap');
 
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
-@font-face {
-    font-family: "font";
-    src: url("../fonts/Modern\ King.ttf");
-}
-  
 * {
-font-family: "font";
+    /* background-color: rgb(27, 25, 52);  */
+    /* color: white; */
+    /* border: 2px solid white; */
+    margin: 0;
+    font-family: 'Spectral SC', serif;
+    word-spacing: 10px;
+    line-height: 58px;
+    letter-spacing: 3px;
 }
 
-body {
-    background-color: #0A043C;
-    position: relative;
+img {
+    border: 1px solid white;
 }
 
 .flex-container {
@@ -27,82 +21,110 @@ body {
 }
 
 .app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    background-color: #03506F;
-}
-.header {
-    background-color: #0A043C;
-    height: 22%;
     width: 100vw;
-    flex-direction: column;
+}
+
+.half-color {
+    z-index: -1;
+    height: 100%;
+    position: fixed;
+    width: 50%;
+    right: 0;
+    background-color: rgba(70, 184, 167, 0.5);
+}
+
+.header {
     justify-content: space-between;
-    align-items: center;
-}
-
-.name * {
-    font-size: 65px;
-    color: rgba(255, 255, 255, 0.3);
-}
-
-
-.main-header-nav {
-    width: 55%;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.main-header-nav > a {
-    text-decoration: none;
-}
-
-.page {
-    font-size: 35px;
-    color: rgba(107, 91, 210, 0.88);
-}
-
-.page:hover {
-    transform: scale(1.1);
-}
-
-.projects {
-    flex-direction: column;
     width: 90%;
 }
 
-.projects-title {
-    color: rgba(107, 91, 210, 0.88);
-    font-size: 50px;
-    margin-top: 40px;
+.header > * {
+    margin: 45px;
 }
 
-.projects-container {
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.header-link {
+    text-decoration: none;
+    color: black;
 }
 
-.project-container {
+.header-link h1 {
+    transition: all .2s ease-in-out;
+}
+
+.header-link h1:hover {
+    transform: scale(1.2);
+    color: black;
+}
+
+.home {
+    display: flex;
+    height: 3500px;
+    width: 100vw;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.project-title {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 40px;
+.quote-section {
+    margin-top: 75px;
+    width: 65%;
 }
 
-.project-link {
-    text-decoration: none;
-    color: white;
+.quote {
+    font-size: 30px;
 }
 
-.project-link:hover {
-    transform: scale(1.1);
+.header *, .quote {
+    font-family: 'Cinzel', serif;
 }
 
-.image {
-    border: 2px solid black;
-    border-radius: 10px;
+.project-container {
+    margin-top: 30px;
+    width: 90%;
+    /* border: 1px solid red; */
+}
+
+.project-description {
+    font-size: 20px;
+    padding: 50px;
+    align-items: center;
+    text-indent: 80px;
+}
+
+.project-image-container {
+    width: 318%;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image-container * {
+    height: 383px;
+}
+
+.skills {
+    background-color: rgba(70, 184, 167, 0.5);
+    display: flex;
+    height: 3500;
+    width: 100vw;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+    padding: 40px;
+    padding-top: 60px;
+}
+
+/* .skills > * {
+    border: 1px solid black;
+} */
+
+.skills h3 {
+    text-indent: 15px;
+}
+
+.skill-title {
+    font-size: 45px;
 }

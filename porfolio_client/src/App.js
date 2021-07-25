@@ -1,44 +1,39 @@
 import { Route, Switch , useHistory} from 'react-router-dom'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-// import './styles/App_styles.css'
+import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/App_styles.css'
 
 import Header from './components/Header/Header'
-import About from './components/About/About';
-import Skills from './components/Skills/Skills';
-import Projects from './components/Projects/Projects';
+import Home from './components/Home/Home';
 import Contact from './components/Contact/Contact';
 
-// import {  }
 
 function App() {
+
+  const [contactModal, setContactModal] = useState(false)
 
   const history = useHistory()
 
   useEffect(() => {
     if (history.location.pathname === '/') {
-      history.push('/projects')
+      history.push('/home')
     }
   }, [history])
 
 
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-      height: '100vh',
-      width: '100vw',
-    }}>
+    <div className='app flex-container'>
+      <div className="half-color"></div>
       <Header />
         <Switch>
-          <Route path='/about' render={() => <About />} />
-          <Route path='/skills' render={() => <Skills />} />
-          <Route path='/projects' render={() => <Projects />} />
+          <Route path='/home' render={() => <Home />} />
           <Route path='/contact' render={() => <Contact />} />
         </Switch>
     </div>
   );
+  
 }
 
 export default App;
