@@ -4,7 +4,7 @@
 * {
     /* background-color: rgb(27, 25, 52);  */
     /* color: white; */
-    /* border: 2px solid black; */
+    border: 2px solid black;
     margin: 0;
     font-family: 'Spectral SC', serif;
     word-spacing: 10px;
@@ -144,9 +144,9 @@ img {
         overflow-y: visible;
     }
 
-    .half-color {
+    /* .half-color {
         height: 50%;
-    }
+    } */
 
     .header > * {
         margin: 15px;
