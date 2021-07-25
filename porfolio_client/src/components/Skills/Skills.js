@@ -24,19 +24,7 @@ export default function Skills() {
                 <h3> - React</h3>
                 <h3> - Mongoose</h3>
             </div>
-
-            {/* <div>
-                <h2 className='skill-title'>Libraries</h2>
-                <h3> - React</h3>
-                <h3> - Mongoose</h3>
-            </div> */}
-
-            {/* <div>
-                <h2 className='skill-title'>Databases</h2>
-                <h3> - MongoDB</h3>
-                <h3> - Postgres</h3>
-            </div> */}
-
+            
             <div>
                 <h2 className='skill-title'>Technologies</h2>
                 <h3> - Axios</h3>

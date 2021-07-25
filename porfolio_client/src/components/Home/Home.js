@@ -26,12 +26,12 @@ export default function Projects() {
                 marginTop: '90px',
                 border: '1px white solid'
             }}>
-                <Carousel>
+                <Carousel prevLabel={''} nextLabel={''}>
                     <Carousel.Item>
-                        <img className='w-100' src={leagueFinderPath} alt="" />
+                        <img className='d-block w-100' src={leagueFinderPath} alt="" />
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img className='w-100' src={snakeGamePath} alt="" />
+                        <img className='d-block w-100' src={snakeGamePath} alt="" />
                     </Carousel.Item>
                 </Carousel>
             </div>
@@ -63,5 +63,3 @@ export default function Projects() {
         </div>
     )
 }
-
-// League of Legends account tracker. Displays the information of the account searched by name. I usually play this game when I am not programming(not very often by the way), and it comes in really handy when I want to check the last few games of my teamates, or even the people I am going against!</
