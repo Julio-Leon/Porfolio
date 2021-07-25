@@ -3,8 +3,7 @@ import AOS from "aos"
 export default function Skills() {
 
     AOS.init({
-        duration: 1000,
-        mirror: true
+        duration: 1000
     })
 
     return (
