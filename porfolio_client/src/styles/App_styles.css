@@ -144,6 +144,10 @@ img {
         overflow-y: visible;
     }
 
+    .half-color {
+        height: 50%;
+    }
+
     .header > * {
         margin: 15px;
     }
