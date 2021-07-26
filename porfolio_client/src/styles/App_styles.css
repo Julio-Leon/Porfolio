@@ -75,7 +75,7 @@ html {
 
 .quote-section {
     margin-top: 75px;
-    width: 65%;
+    width: 70%;
 }
 
 .quote {
@@ -154,6 +154,14 @@ html {
 
     .header > * {
         margin: 15px;
+    }
+
+    .header {
+        height: 50px;
+    }
+
+    .skills {
+        height: 150px;
     }
 
     .project-container {

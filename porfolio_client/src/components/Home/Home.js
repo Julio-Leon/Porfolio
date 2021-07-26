@@ -17,7 +17,7 @@ export default function Projects() {
         <div className='home'>
             <section className='quote-section'>
                 <h1 className='quote'>
-                    Every good developer has a PHD in sacred art of  Googling
+                    Every good developer has a PHD in the sacred art of Googling
                 </h1>
             </section>
 
