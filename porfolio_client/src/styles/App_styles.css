@@ -83,6 +83,12 @@ img {
     font-family: 'Cinzel', serif;
 }
 
+.project-carousel {
+    width: 80%;
+    margin-top: 90px;
+    border: 2px white solid;
+}
+
 .project-container {
     margin-top: 30px;
     width: 90%;
@@ -161,6 +167,10 @@ img {
     .skills {
         height: 150px;
     } */
+
+    .project-carousel {
+        margin-bottom: 35px;
+    }
 
     .project-container {
         flex-direction: column;

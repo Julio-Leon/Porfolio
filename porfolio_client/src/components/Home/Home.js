@@ -21,11 +21,7 @@ export default function Projects() {
                 </h1>
             </section>
 
-            <div style={{
-                width: '80%',
-                marginTop: '90px',
-                border: '1px white solid'
-            }}>
+            <div className='project-carousel'>
                 <Carousel prevLabel={''} nextLabel={''}>
                     <Carousel.Item>
                         <img className='d-block w-100' src={leagueFinderPath} alt="" />
