@@ -26,7 +26,7 @@ function App() {
   return (
     <div className='app flex-container'>
       <div className="half-color"></div>
-      <Header />
+        <Header />
         <Switch>
           <Route path='/home' render={() => <Home />} />
           <Route path='/contact' render={() => <Contact />} />
