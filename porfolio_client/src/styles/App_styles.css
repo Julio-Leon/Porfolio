@@ -76,6 +76,7 @@ img {
 
 .quote {
     font-size: 30px;
+    text-align: center;
 }
 
 .header *, .quote {
