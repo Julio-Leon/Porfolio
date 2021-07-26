@@ -181,6 +181,7 @@ img {
         word-spacing: normal;
         line-height: normal;
         letter-spacing: normal;
+        margin: 0;
     }
 
     .app {
@@ -209,6 +210,10 @@ img {
     .project-container {
         flex-direction: column;
         align-items: center;
+    }
+
+    .quote-section {
+        margin-top: -50px;
     }
 
     .quote {
