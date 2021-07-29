@@ -8,9 +8,9 @@ export default function Header() {
                 <Link to='/home' className='header-link'><h1>Julio Leon</h1></Link>
             </div>
             <div>
-                <Link to='/contact' className='header-link' >
+                <a href='mailto:julio.leon.diaz1@gmail.com' className='header-link' >
                     <h1 className="">Contact</h1>
-                </Link>
+                </a>
             </div>
         </div>
     )

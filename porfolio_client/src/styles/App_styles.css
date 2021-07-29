@@ -103,8 +103,7 @@ img {
 }
 
 .project-image-container {
-    width: 318%;
-    /* border: 1px solid black; */
+    width: 4000px;
     justify-content: center;
     align-items: center;
 }
