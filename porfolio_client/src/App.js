@@ -6,9 +6,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/App_styles.css'
 
 import Header from './components/Header/Header'
-import Home from './components/Home/Home';
-import Contact from './components/Contact/Contact';
-
+import About from './components/About/About';
+import Projects from './components/Projects/Projects';
+import Skills from './components/Skills/Skills'
+import Footer from './components/Footer/Footer'
 
 function App() {
 
@@ -27,10 +28,10 @@ function App() {
     <div className='app flex-container'>
       <div className="half-color"></div>
         <Header />
-        <Switch>
-          <Route path='/home' render={() => <Home />} />
-          <Route path='/contact' render={() => <Contact />} />
-        </Switch>
+        <About />
+        <Projects />
+        <Skills />
+        <Footer />
     </div>
   );
   

@@ -7,7 +7,7 @@ export default function Skills() {
     })
 
     return (
-        <div className='skills flex-container' data-aos='fade-up'>
+        <div id='skills' className='skills flex-container' data-aos='fade-up'>
             <div>
                 <h2 className='skill-title'>Languages</h2>
                 <h3> - HTML</h3>
@@ -18,11 +18,12 @@ export default function Skills() {
             </div>
 
             <div>
-                <h2 className='skill-title'>Frameworks</h2>
+                <h2 className='skill-title'>Frameworks/Libraries</h2>
                 <h3> - Express</h3>
                 <h3> - Django</h3>
                 <h3> - React</h3>
                 <h3> - Mongoose</h3>
+                <h3> - React-Native</h3>
             </div>
             
             <div>
@@ -30,6 +31,9 @@ export default function Skills() {
                 <h3> - Axios</h3>
                 <h3> - AJAX</h3>
                 <h3> - AWS</h3>
+                <h3> - Firebase</h3>
+                <h3> - MongoDB</h3>
+                <h3> - Posgres</h3>
             </div>
         </div>
     )
