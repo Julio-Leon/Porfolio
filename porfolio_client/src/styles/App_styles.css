@@ -275,6 +275,10 @@ img {
     margin: 15px;
   }
 
+  .header * {
+    font-size: 17px;
+  }
+
   /* .header {
         height: 50px;
     }
@@ -285,6 +289,14 @@ img {
 
   .project-carousel {
     margin-bottom: 35px;
+  }
+
+  .left-description .project-image-container {
+    margin-top: 70px;
+  }
+
+  .about {
+    font-size: 15px;
   }
 
   .project-container {

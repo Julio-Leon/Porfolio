@@ -26,7 +26,7 @@ function Projects(props) {
                 </div>
             </div>
 
-            <div className='project-container flex-container'>
+            <div className='left-description project-container flex-container'>
                 <div className='project-description flex-container' data-aos='fade-right'>
                     <a href='https://league-find.netlify.app/' target='_blank' rel='noreferrer'>League Finder</a>
                     <p>League of Legends account tracker. Displays the information of the
@@ -50,7 +50,7 @@ function Projects(props) {
                 </div>
             </div>
 
-            <div className='project-container flex-container'>
+            <div className='left-description project-container flex-container'>
                 <div className='project-description flex-container' data-aos='fade-right'>
                     <a href='https://b-lucid.netlify.app/#/' target='_blank' rel='noreferrer'>B-LUCID</a>
                     <p>An app where users can see other people's posts, leave comments, like them and of course post their own. Users also have their own page that will display only their posts. You can find these users on the search bar on the top right. There is authentication, so only authenticated users will have access to full functionality.</p>
