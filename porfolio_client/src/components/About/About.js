@@ -4,7 +4,7 @@ export default function About() {
             <h1 className='about-title'>
                 Who Am I?
             </h1>
-            <p className='about'>Welcome to my Porfolio, My name is Julio Leon, I am 19 years old and I live in New York. I am a young software developer that loves to learn and looks foward to getting my first job on the field. I know that sometimes it may be hard to trust new developers, but every single one of us are looking for that one person who wants to take that leap of faith for us. With that being said, I hope you like the content.</p>
+            <p className='about'>Welcome to my Portfolio, My name is Julio Leon. I am a young software developer based on New York that is very passionate about programming. I love solving really hard puzzles and algorithms because of the satisfaction that comes after I get it done. But what I love the most is that feeling I get when something I create is useful to someone out there, that motivates me more and more. This is who I am, and I would love to know who you are.</p>
         </div>
     )
 }

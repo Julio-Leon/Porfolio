@@ -39,6 +39,7 @@ img {
 }
 
 .header {
+  z-index: 10;
   justify-content: center;
   width: 100%;
   position: fixed;
@@ -251,6 +252,10 @@ img {
 /* Button to link users to projects */
 
 /* For mobile */
+
+#github-link {
+  color: blue;
+}
 
 @media screen and (max-width: 700px) {
   * {
