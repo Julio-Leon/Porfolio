@@ -143,6 +143,22 @@ img {
   align-items: center;
 }
 
+.project-image-container a {
+  width: 70%;
+  height: 100%;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.project-image-container a img {
+  width: 100%;
+  height: 60%;
+}
+
+.project-image-container a:hover {
+  transform: scale(1.1);
+}
+
 .right-description a {
   text-align: right;
 }
@@ -312,6 +328,11 @@ img {
   .project-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  .project-image-container a img {
+    width: 100%;
+    height: 90%;
   }
 
   .quote {

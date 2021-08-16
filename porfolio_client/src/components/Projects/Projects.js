@@ -18,7 +18,7 @@ function Projects(props) {
             <h1 className='projects-title flex-container' id='projects'>My Projects</h1>
             <div className='right-description project-container flex-container'>
                 <div className="project-image-container flex-container">
-                    <img src={snakeGamePath} width='55%' data-aos='fade-right' alt='' />
+                    <a className='flex-container' href='https://julio-leon.github.io/Snake-Game/' target='_blank' rel='noreferrer'><img src={snakeGamePath} width='55%' data-aos='fade-right' alt='' /></a>
                 </div>
                 <div className='project-description flex-container' data-aos='fade-left'>
                     <a href='https://julio-leon.github.io/Snake-Game/' target='_blank' rel='noreferrer'> The Snake Game</a>
@@ -37,13 +37,13 @@ function Projects(props) {
                     people I am going against! Check it out on <a id='github-link' href="https://github.com/Julio-Leon/league-finder" target='_blank' rel='noreferrer'>Github</a></p>
                 </div>
                 <div className="project-image-container flex-container">
-                    <img src={leagueFinderPath} width='55%' data-aos='fade-left' alt='' />
+                    <a className='flex-container' href='https://league-find.netlify.app/' target='_blank' rel='noreferrer'><img src={leagueFinderPath} width='55%' data-aos='fade-left' alt='' /></a>
                 </div>
             </div>
 
             <div className='right-description project-container flex-container'>
                 <div className="project-image-container flex-container">
-                    <img src={bookAppPath} width='55%' data-aos='fade-right' alt='' />
+                    <a className='flex-container' href='https://bookstop-books.netlify.app/' target='_blank' rel='noreferrer'><img src={bookAppPath} width='55%' data-aos='fade-right' alt='' /></a>
                 </div>
                 <div className='project-description flex-container' data-aos='fade-left'>
                     <a href='https://bookstop-books.netlify.app/' target='_blank' rel='noreferrer'> BookStop</a>
@@ -57,7 +57,7 @@ function Projects(props) {
                     <p>An app where users can see other people's posts, leave comments, like them and of course post their own. Users also have their own  profile page that will display only their posts. You can find these users on the search bar on the top right. There is authentication, so only authenticated users will have access to full functionality. Check it out on <a id='github-link' href="https://github.com/Julio-Leon/B_LUCID_react" target='_blank' rel='noreferrer'>Github</a></p>
                 </div>
                 <div className="project-image-container flex-container">
-                    <img src={bLucidPath} width='55%' data-aos='fade-left' alt='' />
+                    <a className='flex-container' href='https://b-lucid.netlify.app/#/' target='_blank' rel='noreferrer'><img src={bLucidPath} width='55%' data-aos='fade-left' alt='' /></a>
                 </div>
             </div>
         </>
