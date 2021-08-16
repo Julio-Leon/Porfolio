@@ -39,7 +39,7 @@ export default function Header() {
                             Skills
                     </Link>
                     <a href='mailto:julio.leon.diaz1@gmail.com' className='header-link' >
-                        <h1 className="">Contact</h1>
+                        <h1 className="scroller">Contact</h1>
                     </a>
                 </div>
             </div>
