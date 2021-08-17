@@ -34,7 +34,7 @@ function Projects(props) {
                     account searched by name. I usually play this game when I am not 
                     programming(not very often by the way), and it comes in really handy
                     when I want to check the last few games of my teamates, or even the 
-                    people I am going against! Check it out on <a id='github-link' href="https://github.com/Julio-Leon/league-finder" target='_blank' rel='noreferrer'>Github</a></p>
+                    people I am going against! Check it out on <a id='github-link' href="https://github.com/Julio-Leon/league-finder" target='_blank' rel='noreferrer'>Github</a>(currently under re-work.)</p>
                 </div>
                 <div className="project-image-container flex-container">
                     <a className='flex-container' href='https://league-find.netlify.app/' target='_blank' rel='noreferrer'><img src={leagueFinderPath} width='55%' data-aos='fade-left' alt='' /></a>
