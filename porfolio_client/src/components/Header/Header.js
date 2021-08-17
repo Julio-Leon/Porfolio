@@ -1,4 +1,5 @@
-import { Link } from 'react-scroll'
+import { Link } from 'react-scroll';
+import { Document, Page } from 'react-pdf';
 
 export default function Header() {
     return (
@@ -38,6 +39,7 @@ export default function Header() {
                         >
                             Skills
                     </Link>
+                    <a className='header-link' href='./assets/Resume/Julio-Leon-Resume.pdf' download><h1>Resume</h1></a>
                     <a href='mailto:julio.leon.diaz1@gmail.com' className='header-link' >
                         <h1 className="scroller">Contact</h1>
                     </a>

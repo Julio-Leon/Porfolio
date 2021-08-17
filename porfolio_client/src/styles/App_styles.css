@@ -63,6 +63,7 @@ img {
 }
 
 .header-link h1 {
+  font-family: "Jost", sans-serif;
   transition: all 0.2s ease-in-out;
 }
 
