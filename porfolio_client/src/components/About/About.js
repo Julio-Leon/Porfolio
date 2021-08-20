@@ -1,6 +1,12 @@
 export default function About() {
+
+    const myImagePath = './assets/Personal/ProfilePicture.jpeg'
+
     return (
         <div id='about' className="about-section">
+            <div className="my-image flex-container">
+                <img src={myImagePath} alt="" />
+            </div>
             <h1 className='about-title'>
                 Who Am I?
             </h1>

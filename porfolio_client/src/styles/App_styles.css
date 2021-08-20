@@ -256,6 +256,13 @@ img {
   color: black;
 }
 
+.my-image {
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  height: 350px;
+}
+
 /* Something about myself */
 /* Add a projects */
 /* About section, and link to projects that scrolls down on top */
@@ -326,6 +333,10 @@ img {
   .project-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  .my-image {
+    height: 200px;
   }
 
   .project-image-container a {
