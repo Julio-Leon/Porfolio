@@ -12,6 +12,7 @@ function Projects(props) {
     const leagueFinderPath = './assets/Projects/league-finder.png'
     const bookAppPath = './assets/Projects/book-app.png'
     const bLucidPath = './assets/Projects/b-lucid.png'
+    const ticTacToePath = './assets/Projects/tic-tac-toe.png'
 
     return (
         <>
@@ -34,7 +35,7 @@ function Projects(props) {
                     account searched by name. I usually play this game when I am not 
                     programming(not very often by the way), and it comes in really handy
                     when I want to check the last few games of my teamates, or even the 
-                    people I am going against! Check it out on <a id='github-link' href="https://github.com/Julio-Leon/league-finder" target='_blank' rel='noreferrer'>Github</a>(currently under re-work.)</p>
+                    people I am going against! Check it out on <a id='github-link' href="https://github.com/Julio-Leon/league-finder" target='_blank' rel='noreferrer'>Github</a></p>
                 </div>
                 <div className="project-image-container flex-container">
                     <a className='flex-container' href='https://league-find.netlify.app/' target='_blank' rel='noreferrer'><img src={leagueFinderPath} width='55%' data-aos='fade-left' alt='' /></a>
@@ -58,6 +59,16 @@ function Projects(props) {
                 </div>
                 <div className="project-image-container flex-container">
                     <a className='flex-container' href='https://b-lucid.netlify.app/#/' target='_blank' rel='noreferrer'><img src={bLucidPath} width='55%' data-aos='fade-left' alt='' /></a>
+                </div>
+            </div>
+
+            <div className='right-description project-container flex-container'>
+                <div className="project-image-container flex-container">
+                    <a className='flex-container' href='https://github.com/Julio-Leon/Tic-Tac-Toe-Online' target='_blank' rel='noreferrer'><img src={ticTacToePath} width='55%' data-aos='fade-right' alt='' /></a>
+                </div>
+                <div className='project-description flex-container' data-aos='fade-left'>
+                    <a href='https://github.com/Julio-Leon/Tic-Tac-Toe-Online' target='_blank' rel='noreferrer'> Tic Tac Toe</a>
+                    <p>Familiar Tic Tac Toe game built on React-Native. It is not deployed yet but if you'd like to try it on the Expo Go app, send me an email and I'll provide access. You can also clone down the Github Repo and run it yourself on the expo-cli. Check it out on <a id='github-link' href="https://github.com/Julio-Leon/Tic-Tac-Toe-Online" target='_blank' rel='noreferrer'>Github</a></p>
                 </div>
             </div>
         </>
