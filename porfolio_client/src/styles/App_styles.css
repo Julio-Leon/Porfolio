@@ -1,9 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Spectral+SC:ital,wght@1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap");
+
+/* Dynamic Keyframe Animations */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  0% { transform: translateX(-50px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  0% { transform: translateX(50px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px rgba(70, 184, 167, 0.3), 0 0 20px rgba(70, 184, 167, 0.1); }
+  50% { text-shadow: 0 0 20px rgba(70, 184, 167, 0.6), 0 0 40px rgba(70, 184, 167, 0.3); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes rotateIn {
+  0% { transform: rotateX(-90deg); opacity: 0; }
+  100% { transform: rotateX(0); opacity: 1; }
+}
 
 * {
-  /* border: 2px solid black; */
   margin: 0;
   font-family: "Spectral SC", serif;
   word-spacing: 10px;
@@ -13,6 +61,7 @@
 
 img {
   border: 1px solid white;
+  transition: all 0.3s ease;
 }
 
 .flex-container {
@@ -23,8 +72,10 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  overflow-x: hidden;
 }
 
 .half-color {
@@ -33,57 +84,121 @@ img {
   position: fixed;
   width: 50%;
   right: 0;
-  background-color: rgba(70, 184, 167, 0.5);
+  background: linear-gradient(135deg, rgba(70, 184, 167, 0.8) 0%, rgba(41, 128, 185, 0.8) 100%);
+  animation: gradientShift 15s ease infinite;
+  background-size: 200% 200%;
+  top: 0;
 }
 
+/* Header Styles with Dynamic Animation */
 .header {
   z-index: 10;
   justify-content: center;
   width: 100%;
   position: fixed;
-  background-color: rgba(70, 184, 167, 1);
+  background: linear-gradient(135deg, rgba(70, 184, 167, 0.95) 0%, rgba(52, 152, 219, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  top: 0;
+}
+
+.header.scrolled {
+  background: linear-gradient(135deg, rgba(70, 184, 167, 1) 0%, rgba(52, 152, 219, 1) 100%);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
 }
 
 .header > * {
   margin: 25px;
+  animation: floatUp 0.8s ease;
 }
 
 .page-title {
   align-items: center;
+  animation: bounceIn 1s ease;
+}
+
+.header-name {
+  font-family: "Jost", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: glow 3s ease-in-out infinite;
+}
+
+.header-name:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
 
 .header-items {
   width: 85%;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header-link {
   text-decoration: none;
-  color: black;
+  color: white;
+  position: relative;
+  overflow: hidden;
 }
 
 .header-link h1 {
   font-family: "Jost", sans-serif;
-  transition: all 0.2s ease-in-out;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .header-link h1:hover {
-  transform: scale(1.2);
-  color: black;
+  transform: scale(1.15);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+.header-link-item {
+  position: relative;
+  padding: 10px 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.header-link-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  transition: width 0.3s ease;
+}
+
+.header-link-item:hover::after {
+  width: 100%;
 }
 
 .home {
   display: flex;
-  height: 3500px;
+  min-height: auto;
   width: 100vw;
-  /* justify-content: center; */
   flex-direction: column;
   align-items: center;
+  padding-top: 150px;
 }
 
 .quote-section {
   margin-top: 75px;
   width: 70%;
+  animation: slideInRight 1s ease;
 }
 
 .quote {
@@ -91,6 +206,20 @@ img {
   text-align: center;
   padding: 10px;
   margin: 10px;
+  font-family: "Cinzel", serif;
+  background: linear-gradient(135deg, rgba(70, 184, 167, 0.1) 0%, rgba(52, 152, 219, 0.1) 100%);
+  border-left: 5px solid rgba(70, 184, 167, 0.8);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  transition: all 0.3s ease;
+  animation: bounceIn 1.2s ease;
+}
+
+.quote:hover {
+  transform: translateX(10px);
+  box-shadow: 0 15px 35px rgba(70, 184, 167, 0.3);
+  background: linear-gradient(135deg, rgba(70, 184, 167, 0.2) 0%, rgba(52, 152, 219, 0.2) 100%);
 }
 
 .header *,
@@ -98,16 +227,34 @@ img {
   font-family: "Cinzel", serif;
 }
 
-.project-carousel {
-  width: 80%;
-  margin-top: 90px;
-  border: 2px white solid;
+.projects-title {
+  padding: 10px;
+  padding-right: 35px;
+  border-right: 15px solid rgba(70, 184, 167, 0.8);
+  font-size: 3rem;
+  margin: 80px 0 40px 0;
+  animation: slideInLeft 1s ease;
+  color: rgba(70, 184, 167, 0.9);
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .project-container {
-  margin-top: 30px;
+  margin-top: 50px;
   width: 90%;
-  /* border: 1px solid red; */
+  animation: floatUp 0.8s ease both;
+  border-radius: 15px;
+  padding: 30px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(70, 184, 167, 0.05) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(70, 184, 167, 0.2);
+  transition: all 0.3s ease;
+}
+
+.project-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(70, 184, 167, 0.2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(70, 184, 167, 0.1) 100%);
 }
 
 .project-description {
@@ -121,18 +268,37 @@ img {
   padding: 10px 10px 10px 0;
   margin: 10px 10px 10px 0;
   font-family: "Jost", sans-serif;
+  line-height: 1.8;
+  transition: all 0.3s ease;
 }
 
 .project-description a {
   font-weight: 900;
   text-decoration: none;
-  color: black;
-  transition: all 0.2s ease-in-out;
+  color: rgba(70, 184, 167, 0.9);
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.project-description a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(70, 184, 167, 1), rgba(52, 152, 219, 1));
+  transition: width 0.3s ease;
+}
+
+.project-description a:hover::after {
+  width: 100%;
 }
 
 .project-description a:hover {
   transform: scale(1.05);
-  color: black;
+  color: rgba(52, 152, 219, 1);
 }
 
 .project-image-container {
@@ -145,16 +311,38 @@ img {
   width: 650px;
   height: 600px;
   align-items: center;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(70, 184, 167, 0.2);
+  position: relative;
+}
+
+.project-image-container a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+  z-index: 1;
+}
+
+.project-image-container a:hover::before {
+  left: 100%;
 }
 
 .project-image-container a img {
   width: 100%;
   height: 60%;
+  object-fit: cover;
 }
 
 .project-image-container a:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 20px 50px rgba(70, 184, 167, 0.4);
 }
 
 .right-description a {
@@ -167,41 +355,75 @@ img {
 }
 
 .skills {
-  background-color: rgba(70, 184, 167, 0.5);
+  background: linear-gradient(135deg, rgba(70, 184, 167, 0.8) 0%, rgba(52, 152, 219, 0.8) 100%);
   display: flex;
-  height: 3500;
   width: 100vw;
   justify-content: space-around;
-  padding: 40px;
-  padding-top: 60px;
+  padding: 80px 40px;
+  margin-top: 60px;
+  border-top: 3px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: floatUp 1s ease;
 }
 
-.projects-title {
-  padding: 10px;
-  padding-right: 35px;
-  border-right: 15px solid black;
+.skills > div {
+  transition: all 0.3s ease;
 }
 
-.skills h3 {
-  text-indent: 15px;
+.skills > div:hover {
+  transform: translateY(-10px);
 }
 
 .skill-title {
   font-size: 45px;
   padding: 10px;
+  color: white;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  animation: bounceIn 0.8s ease;
+}
+
+.skills h3 {
+  text-indent: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-family: "Jost", sans-serif;
+  margin: 8px 0;
+}
+
+.skills h3:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(10px);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .about-section {
   width: 70%;
   padding: 20px;
   margin: 25px;
-  margin-top: 180px;
+  margin-top: 100px;
+  animation: slideInRight 1s ease;
 }
 
 .about-title {
   padding: 10px;
   padding-left: 35px;
-  border-left: 15px solid black;
+  border-left: 5px solid rgba(70, 184, 167, 0.8);
+  font-size: 2.5rem;
+  color: rgba(70, 184, 167, 0.9);
+  font-weight: 700;
+  transition: all 0.3s ease;
+  animation: slideInLeft 1s ease;
+}
+
+.about-title:hover {
+  transform: translateX(10px);
+  text-shadow: 0 0 15px rgba(70, 184, 167, 0.3);
 }
 
 .about {
@@ -209,51 +431,72 @@ img {
   padding: 10px;
   font-size: 30px;
   font-family: "Jost", sans-serif;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, rgba(70, 184, 167, 0.05) 0%, rgba(52, 152, 219, 0.05) 100%);
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.about:hover {
+  background: linear-gradient(135deg, rgba(70, 184, 167, 0.1) 0%, rgba(52, 152, 219, 0.1) 100%);
 }
 
 .footer {
   width: 100%;
   justify-content: center;
-  background-color: rgba(70, 184, 167, 1);
+  background: linear-gradient(135deg, rgba(70, 184, 167, 0.95) 0%, rgba(52, 152, 219, 0.95) 100%);
+  padding: 40px 0;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+  animation: floatUp 1s ease;
 }
 
 .footer-links {
   width: 18%;
   justify-content: space-around;
+  align-items: center;
 }
 
 .footer-links * {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 25px;
-  padding: 10px;
+  padding: 10px 15px;
   margin: 5px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease;
   font-family: "Jost", sans-serif;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  font-weight: 600;
+}
+
+.footer-links *::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+  z-index: -1;
+}
+
+.footer-links *:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .footer-links *:hover {
   transform: scale(1.1);
-  color: black;
-}
-
-.right-side * {
-  font-size: 30px;
-  margin: 10px;
-}
-
-.scroller {
-  align-items: center;
-  text-decoration: none;
-  color: black;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-  font-family: "Jost", sans-serif;
-}
-
-.scroller:hover {
-  transform: scale(1.2);
-  color: black;
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .my-image {
@@ -261,28 +504,33 @@ img {
   margin: 10px;
   padding: 10px;
   height: 350px;
+  animation: rotateIn 0.8s ease;
 }
 
-/* Something about myself */
-/* Add a projects */
-/* About section, and link to projects that scrolls down on top */
+.my-image img {
+  border-radius: 50%;
+  border: 4px solid rgba(70, 184, 167, 0.8);
+  box-shadow: 0 10px 30px rgba(70, 184, 167, 0.3);
+  transition: all 0.3s ease;
+  animation: pulse 2s ease-in-out infinite;
+}
 
-/* Project titles */
-/* bigger font */
-/* No small caps font */
-
-/* Add title to technolies i know */
-/* Add footer with socials and another contact */
-/* Fix spacing */
-
-/* Button to link users to projects */
-
-/* For mobile */
+.my-image img:hover {
+  transform: scale(1.05) rotate(5deg);
+  box-shadow: 0 15px 40px rgba(70, 184, 167, 0.5);
+}
 
 #github-link {
-  color: blue;
+  color: #3498db;
+  font-weight: 700;
 }
 
+#github-link:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Responsive Design for Mobile */
 @media screen and (max-width: 700px) {
   * {
     word-spacing: normal;
@@ -292,31 +540,30 @@ img {
   }
 
   .app {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
-    overflow-x: clip;
+    overflow-x: hidden;
     overflow-y: visible;
   }
 
-  /* .half-color {
-        height: 50%;
-    } */
-
   .header > * {
-    margin: 15px;
+    margin: 12px;
   }
 
   .header * {
     font-size: 14px;
   }
 
-  /* .header {
-        height: 50px;
-    }
+  .header-items {
+    flex-wrap: wrap;
+    width: 100%;
+  }
 
-    .skills {
-        height: 150px;
-    } */
+  .right-side {
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 
   .project-carousel {
     margin-bottom: 35px;
@@ -328,11 +575,14 @@ img {
 
   .about {
     font-size: 15px;
+    text-indent: 20px;
   }
 
   .project-container {
     flex-direction: column;
     align-items: center;
+    width: 95% !important;
+    padding: 15px !important;
   }
 
   .my-image {
@@ -351,23 +601,21 @@ img {
 
   .quote {
     font-size: 20px;
+    padding: 20px;
   }
 
   .project-description {
     font-size: 10px;
-    padding: 50px;
+    padding: 20px;
     align-items: center;
     text-indent: 30px;
-    height: 120px;
     text-align: center;
   }
 
   .project-image-container {
     width: 65%;
-    /* border: 1px solid black; */
     justify-content: center;
     align-items: center;
-    /* display: none; */
   }
 
   .project-image-container > img {
@@ -375,15 +623,40 @@ img {
   }
 
   .skills {
-    margin-top: 10px;
+    flex-direction: column;
     padding: 20px;
+    align-items: center;
   }
 
   .skill-title {
-    font-size: 15px;
+    font-size: 25px;
   }
 
   .skills h3 {
-    font-size: 10px;
+    font-size: 12px;
+  }
+
+  .about-section {
+    width: 90%;
+    margin-top: 80px !important;
+  }
+
+  .about-title {
+    font-size: 1.5rem;
+  }
+
+  .projects-title {
+    font-size: 1.8rem;
+  }
+
+  .footer-links {
+    width: 80%;
+    flex-wrap: wrap;
+  }
+
+  .footer-links * {
+    font-size: 16px;
+    padding: 8px;
+    margin: 4px;
   }
 }
