@@ -6,9 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/App_styles.css'
 
 import Header from './components/Header/Header'
-import About from './components/About/About';
-import Projects from './components/Projects/Projects';
-import Skills from './components/Skills/Skills'
+import Home from './components/Home/Home'
 import Footer from './components/Footer/Footer'
 
 function App() {
@@ -28,9 +26,7 @@ function App() {
     <div className='app flex-container'>
       <div className="half-color"></div>
         <Header />
-        <About />
-        <Projects />
-        <Skills />
+        <Home />
         <Footer />
     </div>
   );
