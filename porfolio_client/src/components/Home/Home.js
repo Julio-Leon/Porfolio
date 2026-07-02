@@ -18,6 +18,12 @@ export default function Home() {
                 </h1>
             </section>
 
+             <StoryBeat 
+                number="01"
+                title="Analytical Problem Solving"
+                content="I approach every project with a logical, analytical mindset, breaking large problems into manageable tasks. I create clean, maintainable code with attention to detail, whether I'm debugging applications, optimizing performance, or developing new features. The goal is always the same: reliable solutions that work."
+                />
+
             <div className="about-section" data-aos='fade-up' data-aos-duration='1000'>
                 <h1 className='about-title' data-aos='slide-right' data-aos-delay='200'>
                     Who Am I?
@@ -25,19 +31,13 @@ export default function Home() {
                 <p className='about' data-aos='fade-up' data-aos-delay='300'>Welcome to my Portfolio, My name is Julio Leon. I'm a 19-year-old software developer based in New York with a passion for solving real-world problems through technology. My background spans full-stack web development, web application design, and technical instruction. Every day, I focus on delivering reliable solutions that improve user experiences and make meaningful impact.</p>
             </div>
 
-            <StoryBeat 
-                number="01"
-                title="Analytical Problem Solving"
-                content="I approach every project with a logical, analytical mindset, breaking large problems into manageable tasks. I create clean, maintainable code with attention to detail, whether I'm debugging applications, optimizing performance, or developing new features. The goal is always the same: reliable solutions that work."
-                />
-
-            <Projects />
-
-            <StoryBeat 
+              <StoryBeat 
                 number="02"
                 title="Technical Expertise & Continuous Growth"
                 content="With hands-on experience in JavaScript, React, Node.js, HTML, CSS, and modern web development tools, I continuously expand my technical skills while embracing new technologies and frameworks. I understand that great software isn't built overnight—it's built through learning, iteration, and mastery of the fundamentals."
                 />
+
+            <Projects />
 
             <StoryBeat 
                 number="03"
