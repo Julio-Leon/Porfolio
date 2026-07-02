@@ -15,6 +15,7 @@ function Projects(props) {
     const bLucidPath = './assets/Projects/b-lucid.png'
     const ticTacToePath = './assets/Projects/tic-tac-toe.png'
     const pathfinderPath = './assets/Projects/pathfinder-placeholder.svg'
+    const prestamosPath = './assets/Projects/prestamos-placeholder.svg'
 
     return (
         <>
@@ -27,6 +28,16 @@ function Projects(props) {
                 </div>
                 <div className="project-image-container flex-container">
                     <a className='flex-container' href='https://lucid-pathfinder-visualizer.netlify.app/' target='_blank' rel='noreferrer'><img src={pathfinderPath} width='55%' data-aos='fade-left' data-aos-delay='100' alt='Pathfinder Visualizer' /></a>
+                </div>
+            </div>
+
+            <div className='right-description project-container flex-container'>
+                <div className="project-image-container flex-container">
+                    <a className='flex-container' href='https://prestamosleon.netlify.app/' target='_blank' rel='noreferrer'><img src={prestamosPath} width='55%' data-aos='fade-right' data-aos-delay='150' alt='Préstamos León' /></a>
+                </div>
+                <div className='project-description flex-container' data-aos='fade-left' data-aos-delay='150'>
+                    <a href='https://prestamosleon.netlify.app/' target='_blank' rel='noreferrer'> Préstamos León</a>
+                    <p>A comprehensive lending and loan management system designed for companies. Secure authentication allows managers to track and manage client loans with detailed transaction history. Features include account management, loan tracking, and financial reporting. Currently a single-manager system with plans to support multiple manager accounts for scalability. Built with modern best practices for security and user experience. Check it out on <a id='github-link' href="https://github.com/Julio-Leon/prestamos-leon" target='_blank' rel='noreferrer'>Github</a></p>
                 </div>
             </div>
 
