@@ -465,7 +465,7 @@ img {
 }
 
 .footer-links {
-  width: 18%;
+  width: 40%;
   justify-content: space-around;
   align-items: center;
 }
@@ -781,4 +781,12 @@ img {
   .story-text {
     font-size: 1rem;
   }
+}
+
+.ext-link {
+  align-items: center;
+}
+
+* {
+  /* border: 1px solid red; */
 }

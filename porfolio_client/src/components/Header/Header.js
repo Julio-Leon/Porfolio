@@ -51,11 +51,14 @@ export default function Header() {
                         >
                             Skills
                     </Link>
-                    <a className='header-link header-link-item' href='./assets/Resume/Julio-Leon-Resume.pdf' download><h1>Resume</h1></a>
-                    <a href='mailto:julio.leon.diaz1@gmail.com' className='header-link header-link-item' >
+                  
+                </div>
+                <div>
+                        <a className='ext-link flex-container header-link header-link-item' href='./assets/Resume/Julio-Leon-Resume.pdf' download><h1>Resume</h1></a>
+                    <a href='mailto:julio.leon.diaz1@gmail.com' className='ext-link flex-container header-link header-link-item' >
                         <h1 className="scroller">Contact</h1>
                     </a>
-                </div>
+                    </div>
             </div>
         </div>
     )
