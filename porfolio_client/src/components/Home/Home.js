@@ -28,7 +28,7 @@ export default function Home() {
                 <h1 className='about-title' data-aos='slide-right' data-aos-delay='200'>
                     Who Am I?
                 </h1>
-                <p className='about' data-aos='fade-up' data-aos-delay='300'>Welcome to my Portfolio, My name is Julio Leon. I'm a 19-year-old software developer based in New York with a passion for solving real-world problems through technology. My background spans full-stack web development, web application design, and technical instruction. Every day, I focus on delivering reliable solutions that improve user experiences and make meaningful impact.</p>
+                <p className='about' data-aos='fade-up' data-aos-delay='300'>Welcome to my Portfolio, My name is Julio Leon. I'm a 24-year-old software developer based in New York with a passion for solving real-world problems through technology. My background spans full-stack web development, web application design, and technical instruction. Every day, I focus on delivering reliable solutions that improve user experiences and make meaningful impact.</p>
             </div>
 
               <StoryBeat 
